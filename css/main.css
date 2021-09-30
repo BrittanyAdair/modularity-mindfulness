@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  margin: 1.5rem;
+  margin: 0;
 }
 
 .banner {
@@ -28,10 +28,12 @@ body {
 img {
   display: block;
   width: 100%;
+  padding: 0;
 }
 
 header {
   grid-area: banner;
+  margin: 1.5rem;
 }
 
 .banner {
@@ -68,6 +70,7 @@ nav li {
   display: inline;
   padding: 1rem;
   font-size: 1.125rem;
+  align-items: flex-end;
 }
 
 nav a {
@@ -79,24 +82,25 @@ main {
   padding: 0;
 }
 
-article i {
+.intro i {
   font-size: 2rem;
   align-content: center;
-  grid-column: col2;
   padding: 1rem;
-  grid-area: text
 }
 
-article p {
+.intro p {
   font-size: 1rem;
   align-content: center;
-  grid-area: text
 }
 
-article {
+.intro {
   border-bottom: 3px solid #e2e2e2;
   border-top: 3px solid #e2e2e2;
   padding: 1rem;
+  text-align: center;
+  max-width: 30em;
+  margin: 0 auto .5rem auto ;
+  text-align: center;
 }
 
 section {
@@ -105,7 +109,6 @@ section {
   grid-template-columns: 1fr;
   grid-template-areas:
     "banner"
-    "article"
     "col1";
   gap: 1rem;
 }
@@ -114,7 +117,6 @@ section {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       "banner banner banner"
-      "article article article"
       "col1 col2 col3";
     }
 
@@ -142,4 +144,9 @@ figure a {
   padding: .5em 1em .6em;
   border: .2em solid #3783a3;
   border-radius: .3rem;
+}
+
+footer {
+  border-top: 3px solid #e2e2e2;
+  text-align: center;
 }
