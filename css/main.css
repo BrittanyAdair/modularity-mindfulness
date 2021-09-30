@@ -107,6 +107,10 @@ figure a {
   border-radius: .3rem;
 }
 
+footer {
+  text-align: center;
+}
+
 section {
   display: grid;
   grid-template-columns: 1fr;
