@@ -18,13 +18,7 @@ html {
 }
 
 body {
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "banner banner banner"
-    "col1 col2 col3";
-  gap: 1rem;
+  margin: 1.5rem;
 }
 
 .banner {
@@ -40,27 +34,76 @@ header {
   grid-area: banner;
 }
 
+.banner {
+  grid-area: banner;
+}
+
 h1 {
   font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
 }
 
 nav {
   display: flex;
-  justify-content: end;
   grid-area: banner;
   grid-column: 3;
 }
 
+nav ul {
+  align-items: flex-end;
+}
+
 nav li {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
   list-style-type: none;
   display: inline;
-  padding: .5rem;
+  padding: .5em 1em .6em;
+  font-size: 1.125rem;
 }
 
 nav a {
   color: #3783a3;
+}
+
+article i {
+  font-size: 2rem;
+  align-content: center;
+  grid-column: col2;
+  padding: 1rem;
+}
+
+article p {
+  font-size: 1rem;
+  align-content: center;
+  grid-column: col2;
+}
+
+article {
+  border-bottom: 5px #e2e2e2;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "banner banner banner"
+    "col1 col2 col3";
+  gap: 1rem;
+}
+
+@media only screen and (min-width: 38em) {
+  main { align-items: center; }
+
+h3 {
+  list-style-type: none;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
 }
